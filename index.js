@@ -23,12 +23,20 @@ document.addEventListener("keydown", function (event) {
     }
   });
     
- 
   function moveDodgerRight() {
     const leftNumbers = dodger.style.left.replace("px", "");
     const left = parseInt(leftNumbers, 10);
   
+    
+    const right = left + dodger.offsetWidth;
+  
+    if (right < window.innerWidth) {
+      
       dodger.style.left = `${left + 1}px`;
     }
+  }
+ 
+  
+  
   
   
